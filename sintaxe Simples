@@ -1,0 +1,38 @@
+Colancando Valores no Banco:
+
+Entrando no banco:
+
+use biblioteca
+db.create.Collection(“livros”)
+
+
+{
+“titulo”: “Harry Potter”,
+“autor”: “JK Rowling”,
+“ano”: 1997
+},
+{
+“titulo”: “O pequeno Principe”,
+“autor”: “Antonie”,
+“ano”: 1943
+},
+{
+“titulo”: “O Menino Maluquinho”,
+“autor”: “Zarildo Traça”,
+“ano”: 1980
+}
+
+exclusao:
+
+db.livros.deleteOne({titulo:”O pequeno Principe”});
+
+buscando ano apos 2000:
+
+db.livros.find({ ano: { $gte: 2000 } });
+
+update: 
+db.livros.updateOne({ titulo: "Harry Potter" }, { $set: { autor: ”Desconhecido” } });
+
+buscando algo especifico:
+
+db.alunos.findMany({ titulo 1 } , {ano 1 });
